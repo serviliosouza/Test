@@ -48,4 +48,4 @@ jobs:
 
       - name: Connect
         run: |
-          ssh -i $SSH_KEY_PATH root@159.89.94.196
+          ssh -i $SSH_KEY_PATH root@159.89.94.196 echo "Inner droplet"
