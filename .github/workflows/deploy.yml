@@ -50,4 +50,4 @@ jobs:
 
       - name: Connect
         run: |
-          ssh -i $SSH_KEY_PATH root@localhost
+          ssh -i $SSH_KEY_PATH root@192.241.139.146
