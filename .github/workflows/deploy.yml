@@ -46,7 +46,11 @@ jobs:
           SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
           SSH_KEY_PATH: ${{ github.workspace }}/../private.key
 
+      # Connect SSH test
       - name: Connect
         run: |
           echo $SSH_KEY_PATH
           ssh -i $SSH_KEY_PATH root@159.89.94.196 echo "Inner droplet"
+        shell: bash
+        env:
+          SSH_KEY_PATH: ${{ github.workspace }}/../private.key
